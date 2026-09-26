@@ -127,7 +127,9 @@ export default function App() {
     <div className="calculator">
       <div className="display">
         <div className="expression">{expression}</div>
-        <div className={error ? 'value error' : 'value'}>{display}</div>
+        <div className={error ? 'value error' : 'value'} data-testid="display">
+          {display}
+        </div>
       </div>
 
       <div className="keys">

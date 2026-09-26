@@ -6,4 +6,11 @@ export default defineConfig({
   server: {
     port: 5173,
   },
+  test: {
+    // Simulated browser DOM so React components can render in Node
+    environment: 'jsdom',
+    // Makes describe/test/afterEach global, which Testing Library uses for auto-cleanup
+    globals: true,
+    setupFiles: './src/setupTests.js',
+  },
 });
